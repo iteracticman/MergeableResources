@@ -1,4 +1,4 @@
-It's not possible to merge a framework with resource into an iOS app target because the resource are not included in the app bundle.
+It's not possible to merge a framework with resource into an iOS app target because the resources can not be found in debug builds.
 
 Steps to reproduce:
 - Create an Xcode Project with iOS App Template
@@ -10,13 +10,12 @@ Steps to reproduce:
 - Run on Device (!) to make sure everything works as expected
 
 - Change "Create Merged Binary (MERGED_BINARY_TYPE)" build setting of app target to "Automatic (automatic)"
-- Change app target settings to link, but not embed framework target (e.g. change from "Embed and Sign" to "Do Not Embed" in "Frameworks, Libraries and Embedded Content" section in "General" tab)
 
-- Run again (on Device!) and observe how the resources framework resource cannot be found anymore (using SwiftUI you will see a "No image/color named '...' in asset catalog for ..." error message in console logs) 
+- Run again (on Device and with Debug configuration!) and observe how the resources framework resource cannot be found anymore (using SwiftUI you will see a "No image/color named '...' in asset catalog for ..." error message in console logs) 
 
 Note:
 - Everything works fine in Simulator
-- Same behavior for Release and Debug configuration
+- Release configuration works fine
 - Same behavior for manual and automatic merging
 - Same behavior for resources which are not bundled in Asset Catalog
-- When archiving the app, an "Assets.car" file is never present (even when creating archiving for Simulator target, when "Allow archiving for Simulator" is enabled)
+- When archiving the app in debug configuration, an `Assets.car` file is present in `ReexportedBinaries/FrameworkWithResources.framework/` but `Bundle(for: SomeClassInFrameworkWithResources.self)` returns `Frameworks/FrameworkWithResources.framework/`, which does not contain `Assets.car` file. 
