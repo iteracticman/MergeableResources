@@ -12,9 +12,10 @@
 		D5447D2F2BC522EC006AE282 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5447D2E2BC522EC006AE282 /* Assets.xcassets */; };
 		D5447D322BC522EC006AE282 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5447D312BC522EC006AE282 /* Preview Assets.xcassets */; };
 		D5447D402BC5232F006AE282 /* FrameworkWithResources.h in Headers */ = {isa = PBXBuildFile; fileRef = D5447D3F2BC5232F006AE282 /* FrameworkWithResources.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D5447D4A2BC5234E006AE282 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5447D492BC5234E006AE282 /* Media.xcassets */; };
-		D5447D4C2BC5246B006AE282 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5447D4B2BC5246B006AE282 /* Resources.swift */; };
-		D5447D4D2BC5283F006AE282 /* FrameworkWithResources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5447D3D2BC5232F006AE282 /* FrameworkWithResources.framework */; };
+		D54C281F2BD001350063D946 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C281D2BD001350063D946 /* Resources.swift */; };
+		D54C28242BD001990063D946 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D54C281E2BD001350063D946 /* Media.xcassets */; };
+		D5BD45F72BC7C12300AAA2F9 /* FrameworkWithResources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5447D3D2BC5232F006AE282 /* FrameworkWithResources.framework */; };
+		D5C856C92BD0087B0012BAEE /* FrameworkWithResources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D5447D3D2BC5232F006AE282 /* FrameworkWithResources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +28,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D5BD45F92BC7C12300AAA2F9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D5C856C92BD0087B0012BAEE /* FrameworkWithResources.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		D5447D272BC522EB006AE282 /* MergeableResources.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MergeableResources.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5447D2A2BC522EB006AE282 /* MergeableResourcesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeableResourcesApp.swift; sourceTree = "<group>"; };
@@ -35,8 +50,8 @@
 		D5447D312BC522EC006AE282 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D5447D3D2BC5232F006AE282 /* FrameworkWithResources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FrameworkWithResources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5447D3F2BC5232F006AE282 /* FrameworkWithResources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrameworkWithResources.h; sourceTree = "<group>"; };
-		D5447D492BC5234E006AE282 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
-		D5447D4B2BC5246B006AE282 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		D54C281D2BD001350063D946 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		D54C281E2BD001350063D946 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5447D4D2BC5283F006AE282 /* FrameworkWithResources.framework in Frameworks */,
+				D5BD45F72BC7C12300AAA2F9 /* FrameworkWithResources.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +79,7 @@
 				D5447D292BC522EB006AE282 /* MergeableResources */,
 				D5447D3E2BC5232F006AE282 /* FrameworkWithResources */,
 				D5447D282BC522EB006AE282 /* Products */,
+				D54C28252BD002030063D946 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +114,18 @@
 		D5447D3E2BC5232F006AE282 /* FrameworkWithResources */ = {
 			isa = PBXGroup;
 			children = (
+				D54C281E2BD001350063D946 /* Media.xcassets */,
+				D54C281D2BD001350063D946 /* Resources.swift */,
 				D5447D3F2BC5232F006AE282 /* FrameworkWithResources.h */,
-				D5447D492BC5234E006AE282 /* Media.xcassets */,
-				D5447D4B2BC5246B006AE282 /* Resources.swift */,
 			);
 			path = FrameworkWithResources;
+			sourceTree = "<group>";
+		};
+		D54C28252BD002030063D946 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +149,7 @@
 				D5447D232BC522EB006AE282 /* Sources */,
 				D5447D242BC522EB006AE282 /* Frameworks */,
 				D5447D252BC522EB006AE282 /* Resources */,
+				D5BD45F92BC7C12300AAA2F9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,7 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5447D4A2BC5234E006AE282 /* Media.xcassets in Resources */,
+				D54C28242BD001990063D946 /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,7 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5447D4C2BC5246B006AE282 /* Resources.swift in Sources */,
+				D54C281F2BD001350063D946 /* Resources.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +388,7 @@
 		D5447D362BC522EC006AE282 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -382,7 +407,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				MERGED_BINARY_TYPE = automatic;
+				MERGED_BINARY_TYPE = manual;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.george-labs.MergeableResources";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -394,6 +419,7 @@
 		D5447D372BC522EC006AE282 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -412,7 +438,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				MERGED_BINARY_TYPE = automatic;
+				MERGED_BINARY_TYPE = manual;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.george-labs.MergeableResources";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -443,6 +469,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MERGEABLE_LIBRARY = YES;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.george-labs.FrameworkWithResources";
@@ -480,6 +507,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MERGEABLE_LIBRARY = YES;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.george-labs.FrameworkWithResources";
